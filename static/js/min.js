@@ -24,3 +24,6 @@ importScript("clock.js");
 importScript("about.js");
 importScript("close.js");
 importScript("main.js");
+/*
+"user-data.js" "bg.js" "weather.js" "clock.js" "about.js" "close.js" "main.js" 
+*/

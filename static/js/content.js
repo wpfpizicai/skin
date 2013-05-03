@@ -15,6 +15,10 @@
 		insertBtntoXiangce();
 	};
 	function addDragArea(){
+		if(document.getElementById("s_menu")){
+			//新首页
+			return ;
+		}
 		if(!$('#hk_layer')[0]){
 			$(document.body).append($('<div id="hk_layer"><div id="hk_tpl_btn1"><div class="no-img-byextension"></div></div><div id="drag_area_byextension"><div class="drag-area-img"></div><div class="drag-area-text">拖动文件到这里试试</div></div><ul id="hk_wallpapers"></ul></div>')).append($('<div id="bg_entrance_byextension" class="hk_tip" style="display: block;"></div>'));
 		}
@@ -62,6 +66,10 @@
 	};
 	function insertImgs (responseData){
 		if(responseData){
+			if(document.getElementById("s_menu")){
+				//新首页
+				return ;
+			}
 			if(!$('#hk_layer .xiangce-btn')[0]){
 				$("#hk_layer").append("<a class='xiangce-btn' target='_blank' href='http://xiangce.baidu.com/'></a>")
 			}

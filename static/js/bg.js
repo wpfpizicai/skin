@@ -16,37 +16,40 @@ $.extend(BAIDU.BACKGROUND,{
 		
 		var imageMaps = [
 			{
-				'元宵':'festival/body_bg_1.jpg',
-				'春节':'festival/body_bg_2.jpg',
-				'国庆':'festival/body_bg_3.jpg',
-				'元旦':'festival/body_bg_4.jpg'
-			},//节日
+				'海盗':'movie/body_bg_1.jpg',
+				'钢铁侠':'movie/body_bg_2.jpg',
+				'战士':'movie/body_bg_3.jpg',
+				'蝙蝠侠':'movie/body_bg_4.jpg'
+			},//电影
 			{
-				'日出' : 'art/body_bg_1.jpg',
-				'白昼' : 'art/body_bg_2.jpg',
-				'黄昏' : 'art/body_bg_3.jpg',
-				'夜晚' : 'art/body_bg_4.jpg',
-				'昏暗' : 'art/body_bg_5.jpg',
-				'通明' : 'art/body_bg_6.jpg'
+				'嫩芽' : 'shoot/body_bg_1.jpg',
+				'屋顶' : 'shoot/body_bg_2.jpg',
+				'石墩' : 'shoot/body_bg_3.jpg',
+				'柳枝' : 'shoot/body_bg_4.jpg',
+				'廊桥' : 'shoot/body_bg_5.jpg',
+				'春鸭' : 'shoot/body_bg_6.jpg'
 
-			},//艺术
+			},//摄影
 			{
-				'白雪' : 'view/body_bg_1.jpg',
-				'海岸' : 'view/body_bg_2.jpg',
-				'雷电' : 'view/body_bg_3.jpg',
-				'白云' : 'view/body_bg_4.jpg',
-				'乌云' : 'view/body_bg_5.jpg',
+				'长城' : 'view/body_bg_1.jpg',
+				'日出' : 'view/body_bg_2.jpg',
+				'蓝天' : 'view/body_bg_3.jpg',
+				'黄昏' : 'view/body_bg_4.jpg',
+				'熔盐' : 'view/body_bg_5.jpg',
 
 			},//景色
 			{
-				'桃花' : 'plant/body_bg_1.png',
-				'山川' : 'plant/body_bg_2.jpg',
-				'白梅' : 'plant/body_bg_3.png',
-				'红梅' : 'plant/body_bg_4.png'
-			},//植物
+				'教堂' : 'plant/body_bg_1.jpg',
+				'吊桥' : 'plant/body_bg_2.jpg',
+				'阶梯' : 'plant/body_bg_3.jpg',
+				'廊檐' : 'plant/body_bg_4.jpg',
+				'白宫' : 'plant/body_bg_5.jpg',
+			},//建筑
 			{
-				'美女1' : 'girl/body_bg_1.jpg',
-				'美女2' : 'girl/body_bg_2.jpg',
+				'美女一' : 'girl/body_bg_1.jpg',
+				'美女二' : 'girl/body_bg_2.jpg',
+				'美女三' : 'girl/body_bg_3.jpg',
+				'美女四' : 'girl/body_bg_4.jpg',
 			}//美女
 		];
 		return imageMaps[(index||0)];
@@ -123,11 +126,7 @@ $.extend(BAIDU.BACKGROUND,{
 		return {
 			getAllTitles : function(){
 				return [
-					'节日',
-					'艺术',
-					'景色',
-					'植物',
-					'美女'
+					'电影','摄影','景色','建筑','美女'
 				];
 			},
 			init : function(){

@@ -8,7 +8,7 @@ BAIDU.USERDATA = (function () {
 			'北京','悉尼','华盛顿','伦敦'
 		],
 		BG_TAB = [
-			'节日','艺术','景色','植物'
+			'电影','摄影','景色','建筑','美女'
 		],
 		DEFAULT_CUR_TAB = 2,
 		DEFAULT_CUR_TIMEZONE = 0,
