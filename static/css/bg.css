@@ -1,0 +1,82 @@
+.s-content .img-wrap{
+	margin-left: 70px;
+}
+.img-wrap ul,.img-wrap li{
+	overflow: hidden;
+}
+.img-wrap ul li{
+	width: 300px;
+	height: 135px;
+	position: relative;
+	float: left;
+}
+.img-wrap ul li .img-tag,.img-wrap ul li .img-add{
+	position: absolute;
+	height: 21px;
+	width: 300px;
+	overflow: hidden;
+	background: rgba(0,0,0,0.6);
+	color: #FFF;
+	text-align: center;
+}
+.img-wrap ul li .img-tag{
+	top: -21px;
+	left: 0;
+	-webkit-transition: top 500ms;
+	cursor: pointer;
+}
+.img-wrap ul li .img-add{
+	bottom: -21px;
+	left: 0px;
+	-webkit-transition: bottom 500ms;
+	cursor: pointer;
+}
+.img-wrap ul li:hover .img-tag{
+	top:0px;
+	-webkit-transition: top 500ms;
+}
+.img-wrap ul li:hover .img-add{
+	bottom:0px;
+	-webkit-transition: bottom 500ms;
+}
+.img-wrap ul li a{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	background: url('chrome-extension://__MSG_@@extension_id__/static/img/loading.gif') center center no-repeat #999999;
+}
+.img-wrap ul li a img{
+	display: block;
+	position: relative;
+	width: 300px;
+	height: 135px;
+	vertical-align: top;
+}
+.s-top .bg-top ,.bg-top li{
+	float: left;
+}
+.bg-top li{
+	width: 88px;
+	text-align: center;
+}
+.bg-top li:hover{
+	background: rgba(129,129,129,0.4);
+	cursor: pointer;
+	-webkit-transition: background 500ms;
+}
+.bg-top li.selected{
+	background: rgba(29,29,29,0.4);
+}
+.bg-top li:hover a,.bg-top li.selected a{
+	color: #fff;
+}
+.bg-top li a{
+	color: #000;
+	font-size: 14px;
+	text-decoration: none;
+	line-height: 50px;
+	font-weight: bold;
+	display: block;
+}

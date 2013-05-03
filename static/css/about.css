@@ -1,0 +1,24 @@
+.s-content .about-wrap{
+	margin-left: 70px;
+	position: relative;
+}
+.about-wrap img{
+	width: 300px;
+	height: 150px;
+	z-index: 1;
+}
+.about-wrap .about-p{
+	background: rgba(150,150,150,0.5);
+	width: 300px;
+	height: 100px;
+	z-index: 2;
+	position: absolute;
+	top:17px;
+}
+.about-wrap p{
+	padding-left: 10px;
+	line-height: 24px;
+	height: 24px;
+	color: white;
+	text-align: center;
+}

@@ -1,0 +1,48 @@
+.s-content .clock-wrap{
+	margin-left: 70px;
+}
+.clock-wrap ul,.clock-wrap li{
+	overflow: hidden;
+}
+.clock-wrap ul li{
+	width: 300px;
+	height: 135px;
+	position: relative;
+	float: left;
+}
+.s-top .clock-top {
+	margin: auto ;
+	text-align: center;
+	vertical-align: middle;
+	height: 50px;
+	line-height: 50px;
+	color: rgb(36,36,36);
+}
+/*
+.clock-top li{
+	float: left;
+}
+
+.clock-top li{
+	width: 110px;
+	text-align: center;
+}
+.clock-top li:hover{
+	background: rgba(129,129,129,0.4);
+	cursor: pointer;
+	-webkit-transition: background 500ms;
+}
+.clock-top li.selected{
+	background: rgba(29,29,29,0.4);
+}
+.clock-top li:hover a,.clock-top li.selected a{
+	color: #fff;
+}
+.clock-top li a{
+	color: #000;
+	font-size: 14px;
+	text-decoration: none;
+	line-height: 50px;
+	font-weight: bold;
+	display: block;
+}*/

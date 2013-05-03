@@ -1,0 +1,151 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
+	margin:0;
+	padding: 0;
+}
+ol,ul,li{
+	list-style: none;
+}
+body{
+	width:440px;
+	height: 220px;
+    overflow: hidden;
+    margin: auto 0 ;
+    font-family: Microsoft YaHei,arial,\5b8b\4f53,sans-serif;
+}
+.s-top{
+	width: 440px;
+	height: 50px;
+	background:rgba(0,0,0,0.1); 
+}
+.s-main{
+	width: 440px;
+	height: 135px;
+	position: relative;
+	margin: 0 auto;
+}
+.s-nav{
+	width: 440px;
+	height: 35px;
+}
+.s-main .s-content{
+	width: 3000px;
+	height: 135px; 
+	overflow: hidden;
+}
+.s-main .left-hand,.s-main .right-hand{
+	z-index: 2;
+	width: 70px;
+	height: 135px;
+	background: rgba(0,0,0,0.6);
+	-webkit-transition: background 500ms;
+	position: absolute;
+}
+.s-main .left-hand{
+	top:0px;
+	left: 0px;
+}
+.s-main .right-hand{
+	top:0px;
+	right: 0px;
+}
+.s-main .left-hand:hover,.s-main .right-hand:hover{
+	background: rgba(0,0,0,0.2);
+}
+.s-main .left-hand a{
+	-webkit-transition: all 500ms;
+	position: absolute;
+	background: url('chrome-extension://__MSG_@@extension_id__/static/img/left_hand.png');
+	width: 30px;
+	height: 60px;
+	right: 22px;
+	top: 37px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.s-main .right-hand a{
+	-webkit-transition: all 500ms;
+	position: absolute;
+	background: url('chrome-extension://__MSG_@@extension_id__/static/img/right_hand.png');
+	width: 30px;
+	height: 60px;
+	left: 22px;
+	top: 37px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.s-main .left-hand:hover a,.s-main .right-hand:hover a{
+	opacity: 1;
+}
+.s-nav{
+	-webkit-box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15);
+	background: rgba(0,0,0,0.1);
+	padding-top: 1px;
+}
+.s-nav ul{
+	width: 440px;
+	margin: 0 auto;
+	background-color: #fff;
+	height: 35px;
+}
+.s-nav ul li{
+	float: left;
+	position: relative;
+}
+.s-nav ul li a{
+	display: block;
+	text-decoration: none;
+	width: 108px;
+	height: 26px;
+	font-size: 0.9em;
+	padding: 9px 0 0;
+	margin: 0 1px;
+	text-align: center;
+	cursor: pointer;
+}
+.s-nav ul li a em{
+	font-style: normal;
+	position: relative;
+	z-index: 2;
+}
+.s-nav ul li a span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 109px;
+	height: 6px;
+	-webkit-transition: height 500ms;
+	z-index: 1;
+}
+.s-nav ul li:hover a span{
+	height: 35px;
+	-webkit-transition: height 500ms;
+}
+.s-nav ul li.selected a span{
+	height: 12px;
+	-webkit-transition: height 500ms;
+}
+.s-nav ul li:hover a em{
+	color:white;
+}
+.s-nav ul li.selected a em{
+	color:black;
+}
+.s-nav ul li.weather a span{
+	background-color: #622280;
+}
+.s-nav ul li.PM25 a span{
+	background-color: #009345;
+}
+.s-nav ul li.backgroundset a span{
+	background-color: #6d86a5;
+}
+.s-nav ul li.about a span{
+	background-color:#29afb2;
+}
+.s-nav ul li.close a span{
+	background-color:#d6234a;
+	width:110px;
+}
+.s-nav ul li.weather {
+	display: none;
+}
