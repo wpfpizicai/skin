@@ -97,6 +97,7 @@
 				document.body.style.backgroundRepeat="no-repeat";
 		 		document.body.style.backgroundPosition='center top';
 		 		if(document.getElementById("s_menu")){
+		 			return ;
 		 			//新首页
 		 			document.body.style.backgroundSize='100%';//contain
 		 			document.body.className = 'newbaidu-by-extension-' + fontcolor;
