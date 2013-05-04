@@ -1,5 +1,5 @@
 #!/bin/sh
-MOD_NAME="baidu-notifier"
+MOD_NAME="weathercom"
 
 #把需要的文件都copy到相应的目录下
 rm -rf output && mkdir output
