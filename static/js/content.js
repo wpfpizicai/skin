@@ -146,6 +146,9 @@
 		}
 	};
 	function removeAllcss(){
+		if(document.getElementById("s_menu")){
+ 			return ;
+ 		}
 		//两者皆有的
  		document.body.style.backgroundImage="";
 		document.body.className ="";
