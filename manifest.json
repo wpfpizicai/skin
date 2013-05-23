@@ -3,7 +3,7 @@
 
 	"name" : "百度首页-背景设置",
 	"description" : "The extension is used to change background image for www.baidu.com.",
-	"version" : "1.4",
+	"version" : "1.5",
 
 	"permissions":[
 		"tabs", 
