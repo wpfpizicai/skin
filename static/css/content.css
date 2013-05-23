@@ -252,3 +252,6 @@
 .newbaidu-by-extension-white .s_btn_wr,.classicbaidu-by-extension-white .s_btn_wr,.newbaidu-by-extension- .s_btn_wr,.classicbaidu-by-extension- .s_btn_wr{
 	background:transparent;
 }
+.classicbaidu-by-extension-white #lm a{
+	color: #fff;
+}
