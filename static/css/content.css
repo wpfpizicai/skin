@@ -175,16 +175,19 @@
 }
 .hk_tip {
 	display: block;
-	width: 36px;
-	height: 36px;
+	width: 40px;
+	height: 40px;
 	position: fixed;
 	bottom: 0;
 	right: 0;
 	background-image: url(chrome-extension://__MSG_@@extension_id__/static/img/hk_tip.png);
 	background-repeat: no-repeat;
-	background-position: 3px 3px;
+	background-position: right -58px;
 	cursor: pointer;
 	z-index: 1001;
+}
+.hk_tip:hover{
+	background-position: right -2px;
 }
 #hk_layer #hk_tpl_btn1{
 	padding-left: 30px;
