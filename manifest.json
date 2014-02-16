@@ -44,6 +44,7 @@
 			"all_frames":false
 		}
 	],
+	
 	"background" : {
     	"scripts": ["static/js/jquery-1.9.1.min.js","static/js/background_up.js"]
   	},
