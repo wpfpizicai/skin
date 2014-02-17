@@ -4,7 +4,7 @@
 		{fontcolor:"",logimg:"logo_baidu_light.png"}//背景为亮色
 	];
 	var defaultLogoImg = "http://www.baidu.com/img/shouye_b5486898c692066bd2cbaeda86d74448.gif";
-	if (location.host=="www.baidu.com"||location.host=="www.spacefe.baidu.com"||location.host=="yulan.baidu.com") {
+	if (location.host=="www.baidu.com" && location.hash.indexOf('wd') == -1) {
 		addDragArea();
 		bindDragArea();
 		chrome.extension.sendMessage({defaultimg:$('#hk_tpl_btn2').attr('data-src'),isfirstinit:"true"}, function(response){
@@ -15,8 +15,8 @@
 		insertBtntoXiangce();
 	};
 	function addDragArea(){
-		if(document.getElementById("s_menu")){
-			//新首页
+		if(isNotClassicBaidu()){
+			//新首页 和 结果页
 			return ;
 		}
 		if(!$('#hk_layer')[0]){
@@ -64,10 +64,17 @@
 			},2000);
 		})
 	};
+	function isNotClassicBaidu (){
+		var s_menu = document.getElementById("s_menu"),
+			s_u = $("#u");
+
+		return s_menu || (s_u && $(s_u).css('display')!= 'none')
+	};
+
 	function insertImgs (responseData){
 		if(responseData){
-			if(document.getElementById("s_menu")){
-				//新首页
+			if(isNotClassicBaidu()){
+				//新首页 和结果页
 				return ;
 			}
 			if(!$('#hk_layer .xiangce-btn')[0]){
@@ -98,40 +105,23 @@
 		})
 	};
 	function setBackground (responseData) {
+		//新首页 和结果页不需要添加代码	
+		if(isNotClassicBaidu()){
+			return;
+		}
 		if(responseData&&responseData.shadowflag!==undefined){
 			var fontcolor = colorSet[(responseData.shadowflag?0:1)].fontcolor,
 				logourl = colorSet[(responseData.shadowflag?0:1)].logimg;
 			if(responseData.imgurl){
 				document.body.style.backgroundRepeat="no-repeat";
 		 		document.body.style.backgroundPosition='center top';
-		 		if(document.getElementById("s_menu")){
-		 			return ;
-		 			//新首页
-		 			document.body.style.backgroundSize='100%';//contain
-		 			document.body.className = 'newbaidu-by-extension-' + fontcolor;
-					$('#u').css({
-						border:"none"
-					});
-
-			 		if($('#lg .fluxslider .image1')[0]){
-			 			$('#lg .fluxslider .image1').css({
-				 			backgroundImage:("url(chrome-extension://"+chrome.i18n.getMessage("@@extension_id")+"/static/img/"+logourl+")")
-				 		});
-			 		}
-			 		else{
-			 			$('#lg img').attr({
-				 			src:("chrome-extension://"+chrome.i18n.getMessage("@@extension_id")+"/static/img/"+logourl)
-				 		});
-			 		}	
-		 		}else{
-		 			//传统首页
-		 			document.body.style.backgroundSize='cover';
-		 			document.body.className = 'classicbaidu-by-extension-' + fontcolor;
-		 			
-		 			$('#lg img').attr({
-			 			src:("chrome-extension://"+chrome.i18n.getMessage("@@extension_id")+"/static/img/"+logourl)
-			 		});
-		 		}
+		 		//传统首页
+	 			document.body.style.backgroundSize='cover';
+	 			document.body.className = 'classicbaidu-by-extension-' + fontcolor;
+	 			
+	 			$('#lg img').attr({
+		 			src:("chrome-extension://"+chrome.i18n.getMessage("@@extension_id")+"/static/img/"+logourl)
+		 		});
 		 		//两者皆有的
 		 		document.body.style.backgroundImage='url("'+responseData.imgurl+'")';
 	

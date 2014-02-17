@@ -3,7 +3,7 @@
 
 	"name" : "百度首页-背景设置",
 	"description" : "The extension is used to change background image for www.baidu.com.",
-	"version" : "1.5",
+	"version" : "1.6",
 
 	"permissions":[
 		"tabs", 
@@ -35,11 +35,10 @@
 			"matches":[
 				"http://www.baidu.com/",
 				"http://www.baidu.com/dsp=pc",
-				"http://xiangce.baidu.com/picture/detail/*",
-				"http://yulan.baidu.com/"
+				"http://xiangce.baidu.com/picture/detail/*"
 			],
 			"css" : ["static/css/content.css","static/css/jquery-ui-1.10.2.custom.min.css"],
-			"js" : ["static/js/jquery-1.9.1.min.js","static/js/content_up.js"],
+			"js" : ["static/js/jquery-1.9.1.min.js","static/js/content.js"],
 			"run_at":"document_end",
 			"all_frames":false
 		}
