@@ -1,4 +1,5 @@
 skin
 ====
 
-set background for baidu search engine web
+set background for baidu search engine web!
+
